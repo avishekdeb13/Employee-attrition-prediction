@@ -35,7 +35,7 @@ body {
 	<h1>Employee Attrition Prediction</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
+    <form action="{{ url_for('predict')}}"method="post","get">
     	<input type="text" name="Age" placeholder="Age" required="required" />
         <input type="text" name="Distance from home" placeholder="Distance from home" required="required" />
 		<input type="text" name="Education level" placeholder="Education level" required="required" />
