@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Total Data Science</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<img src=
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRULp-951iNr9HYWU3PxmbXMxhF9t9S2Ak5Nl01exm47s0ddc0HHKS9XFrFbh5zQCU2oXU&usqp=CAU"
+         alt="zomato image", width="400", height="150", style="float:left">
+
+
+<style>
+body {
+  background-image: url("https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/images/stock-photography/hr/usecase-marquee-hr.jpg");
+  background-position: 200%;
+  background-size: cover;
+}
+</style>
+
+
+
+ <div class="login">
+	<h1>Employee Attrition Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Age" placeholder="Age" required="required" />
+        <input type="text" name="Distance from home" placeholder="Distance from home" required="required" />
+		<input type="text" name="Education level" placeholder="Education level" required="required" />
+        <input type="text" name="Gender" placeholder="Gender" required="required" />
+        <input type="text" name="Job role" placeholder="Job role" required="required" />
+        <input type="text" name="Marital status" placeholder="Marital status" required="required" />
+        <input type="text" name="Monthly income" placeholder="Monthly income" required="required" />
+        <input type="text" name="Over time" placeholder="Over time" required="required" />
+        <input type="text" name="Stock level option" placeholder="Stock level option" required="required" />
+        <input type="text" name="Total working years" placeholder="Total working years" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+     <h2>
+       {{ prediction_text }}
+     </h2>
+
+
+ </div>
+
+
+</body>
+</html>
